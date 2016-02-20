@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-//Explict
+//Explicit
 
     private ListView trafficListView;
     private Button aboutButton;
@@ -17,5 +17,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //bind widget คือการผูกตัวแปล
+        bindwidget();
+
     }// main method
+
+    private void bindwidget() {
+
+        trafficListView = (ListView) findViewById(R.id.listView);
+        aboutButton = findViewById(R.id.button);
+
+    } //bindwidget
 }// main class
