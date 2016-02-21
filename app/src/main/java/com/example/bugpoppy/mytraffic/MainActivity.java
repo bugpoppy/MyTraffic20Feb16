@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.dog);
                mediaPlayer.start();
 
-               //eb view
+               //web view
                Intent intent = new Intent(Intent.ACTION_VIEW);
                intent.setData(Uri.parse("https://youtu.be/Jy35oa5oFoY"));
                startActivity(intent);
