@@ -86,7 +86,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.button4:
-                myIndexAnInt += 1;
+                myIndexAnInt += 1;  //หมายถึงมันเพิ่มค่าตัวของมันเองมันจะไปหน้า ไปทีละหน้า
                 if (myIndexAnInt >=20 ) {
                     myIndexAnInt = 0;
                 }
