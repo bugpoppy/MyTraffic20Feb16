@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/traffic_09"/> //ตรงนี้ทำให้เกิด icon หน้าจอในมือถือ
+        android:icon="@drawable/traffic_09"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         //create ListView
         //Type1
-        int[] iconIts = {R.drawable.traffic_01, R.drawable.traffic_02,
+        final int[] iconIts = {R.drawable.traffic_01, R.drawable.traffic_02,
                 R.drawable.traffic_03, R.drawable.traffic_04,
                 R.drawable.traffic_05, R.drawable.traffic_06,
                 R.drawable.traffic_07, R.drawable.traffic_08,
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.traffic_19, R.drawable.traffic_20};
 
         //Type2
-        String[] titlStrings = new String[20];
+        final String[] titlStrings = new String[20];
         titlStrings[0] = "หัวข้อหลักที่ 1";
         titlStrings[1] = "หัวข้อหลักที่ 2";
         titlStrings[2] = "หัวข้อหลักที่ 3";
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         //Type3
         String[] detailshStrings = getResources().getStringArray(R.array.detail_short);
 
-        //Sent
+        //Sent Value to Adapter
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, iconIts, titlStrings, detailshStrings);
         trafficListView.setAdapter(myAdapter);
 
@@ -85,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+
+                intent.putExtra("Title", titlStrings);
+                intent.putExtra("Image", iconIts);
+                intent.putExtra("Index", position);
+
                 startActivity(intent);
             }
         });

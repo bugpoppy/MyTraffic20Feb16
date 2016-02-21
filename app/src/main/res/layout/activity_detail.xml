@@ -21,7 +21,8 @@
             android:text="New Text"
             android:id="@+id/textView4"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/h1" />
+            android:textSize="@dimen/h1"
+            android:textColor="#e4fd05" />
 
         <ImageView
             android:layout_width="@dimen/Image"
@@ -42,7 +43,8 @@
                 android:text="New Text"
                 android:id="@+id/textView5"
                 android:textSize="@dimen/h2"
-                android:textIsSelectable="false" />
+                android:textIsSelectable="false"
+                android:textColor="#ccc513" />
         </ScrollView>
 
     </LinearLayout>
