@@ -2,11 +2,12 @@ package com.example.bugpoppy.mytraffic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Explicit
     private TextView titleTextView, detailTextView;
@@ -28,11 +29,19 @@ public class DetailActivity extends AppCompatActivity {
         //Show View
         showView();
 
-
+        //Button controler
+        buttonController();
 
 
 
     }//main method
+
+    private void buttonController() {
+        preButton.setOnClickListener(this);
+        backButton.setOnClickListener(this);
+        nextButton.setOnClickListener(this);
+
+    } // buttonController
 
     private void showView() {
 
@@ -63,5 +72,30 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button2:
+                myIndexAnInt -= 1; //หมายถึงมันลบค่าตัวของมันเองมันจะถอยหลัง ไปทีละหน้า
+                if (myIndexAnInt < 0) {
+                    myIndexAnInt = 19;
+                }
+                changVilew(myIndexAnInt);
+                break;
+            case R.id.button3:
+                finish();
+                break;
+            case R.id.button4:
+                myIndexAnInt += 1;
+                if (myIndexAnInt >=20 ) {
+                    myIndexAnInt = 0;
+                }
+                changVilew(myIndexAnInt);
+                break;
+
+        }//switch
+
+
+    } //onClick
 }//main class
 
